@@ -100,6 +100,38 @@
     <Content Include="Content\AdminStyles.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\HeaderPhoto.jpg" />
+    <Content Include="Content\Images\About.jpg" />
+    <Content Include="Content\Images\AboutPhoto.jpg" />
+    <Content Include="Content\Images\ChartHeaderPhoto.jpg" />
+    <Content Include="Content\Images\ImageContact.jpg" />
+    <Content Include="Content\Images\BlackDress.jpg" />
+    <Content Include="Content\Images\CasualCostume.jpg" />
+    <Content Include="Content\Images\CasualPant.jpg" />
+    <Content Include="Content\Images\CasualSquerMix.jpg" />
+    <Content Include="Content\Images\ContactImage.jpg" />
+    <Content Include="Content\Images\DarkGreenT-shirt.jpg" />
+    <Content Include="Content\Images\Dress.jpg" />
+    <Content Include="Content\Images\Footwear.jpg" />
+    <Content Include="Content\Images\Guide.jpg" />
+    <Content Include="Content\Images\HeaderPhotoOne.jpg" />
+    <Content Include="Content\Images\HeaderPhotoTree.jpeg" />
+    <Content Include="Content\Images\HeaderPhotoTwo.jpg" />
+    <Content Include="Content\Images\Bag.jpg" />
+    <Content Include="Content\Images\LoungeSuit.jpg" />
+    <Content Include="Content\Images\MainHeaderPhoto.jpg" />
+    <Content Include="Content\Images\NewCollection.png" />
+    <Content Include="Content\Images\NewsHeaderPhoto.jpg" />
+    <Content Include="Content\Images\PinkDress.jpg" />
+    <Content Include="Content\Images\PinkT-Shirt.jpg" />
+    <Content Include="Content\Images\ShirtWhite.jpg" />
+    <Content Include="Content\Images\Shuese.jpg" />
+    <Content Include="Content\Images\Stitch.jpg" />
+    <Content Include="Content\Images\Sunglasses.jpg" />
+    <Content Include="Content\Images\SweaterGreen.jpg" />
+    <Content Include="Content\Images\Tobi-Shift-Dress.jpg" />
+    <Content Include="Content\Images\Watches.jpg" />
+    <Content Include="Content\Images\Woodenclothhanger.jpg" />
     <Content Include="Content\main.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\vendor\select2\select2.min.css" />
@@ -2639,6 +2671,25 @@
     <Content Include="Content\Images\thumb-item-03.jpg" />
     <Content Include="Content\Images\Untitled-5.jpg" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="NewsImage\FirstPost.jpg" />
+    <Content Include="NewsImage\FivePost.jpg" />
+    <Content Include="NewsImage\FourPost.jpg" />
+    <Content Include="NewsImage\SecondPost.jpg" />
+    <Content Include="NewsImage\ThreePost.jpg" />
+    <Content Include="ProductImages\AlternativeDress.png" />
+    <Content Include="ProductImages\Clothes.jpg" />
+    <Content Include="ProductImages\Dress.jpg" />
+    <Content Include="ProductImages\Dress2.jpg" />
+    <Content Include="ProductImages\Dress3.jpg" />
+    <Content Include="ProductImages\Dress4.jpg" />
+    <Content Include="ProductImages\image.png" />
+    <Content Include="ProductImages\Punt.jpg" />
+    <Content Include="ProductImages\Scratch.jpg" />
+    <Content Include="ProductImages\Shirt.jpg" />
+    <Content Include="ProductImages\StilesCostume.jpg" />
+    <Content Include="ProductImages\T-Shirt.jpg" />
+    <Content Include="ProductImages\WomanBlose.jpg" />
+    <Content Include="ProductImages\WoolJacket.jpg" />
     <Content Include="Scripts\AdminScript.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -2896,7 +2947,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ProductImages\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -17,6 +17,8 @@ namespace BookStore.Models
             db.Categories.Add(new Category { Name = "Woman" });
             db.Categories.Add(new Category { Name = "Kid" });
 
+
+
             base.Seed(db);
         }
     }

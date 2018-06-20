@@ -19,7 +19,8 @@ namespace BookStore.Controllers
         // GET: AdminPanel
         public ActionResult Index()
         {
-            return View(db.Products.ToList());
+            var query = db.Products.Include(p => p.ImageProducts);
+            return View(query.ToList());
         }
 
         // GET: AdminPanel/Details/5
@@ -47,27 +48,24 @@ namespace BookStore.Controllers
         //[ValidateAntiForgeryToken]
         public ActionResult Create(Product product, HttpPostedFileBase ImageFile, ImageProduct imageProduct)
         {
-            if (ModelState.IsValid)
+            if (ImageFile != null)
             {
-                if (ImageFile != null)
-                {
-                    string fileName = Path.GetFileName(ImageFile.FileName);
-                    ImageFile.SaveAs(Server.MapPath("~/ProductImages/" + fileName));
-                }
+                string fileExtention = Path.GetExtension(ImageFile.FileName);
+                string fileName = Guid.NewGuid().ToString() + fileExtention.ToString();
+                ImageFile.SaveAs(Server.MapPath("~/ProductImages/" + fileName));
 
-                imageProduct.ImageName = ImageFile.FileName;
+                imageProduct.ImageName = fileName;
 
-                //imageProduct.ProductId = product.Id;
+                imageProduct.ProductId = product.Id;
 
-                //db.Products.Add(product);
+                db.Products.Add(product);
                 db.ImagesProducts.Add(imageProduct);
 
                 db.SaveChanges();
-                //ModelState.Clear();
+                ModelState.Clear();
                 return RedirectToAction("Index");
             }
-
-            return View(product);
+            return RedirectToAction("Index");
         }
 
         // GET: AdminPanel/Edit/5
@@ -122,8 +120,20 @@ namespace BookStore.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Product product = db.Products.Find(id);
+
+            foreach(var item in product.ImageProducts)
+            {
+                if(item.ProductId == id)
+                {
+                    string imagePath = "~/ProductImages/" + item.ImageName;
+
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+
             db.Products.Remove(product);
             db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 

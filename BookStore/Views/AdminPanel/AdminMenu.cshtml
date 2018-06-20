@@ -1,9 +1,9 @@
 ﻿<div class="menu_wrapper">
     <div id='cssmenu'>
 		<ul>
-			<li><a href='@Url.Action("Index", "AP")'><span>Home</span></a></li>
+			<li><a href='@Url.Action("Index", "Home")'><span>Home</span></a></li>
 			<li @*class='active has-sub'*@>
-				<a href='@Url.Action("ProductsAP", "AP")'><span>Products</span></a>
+				<a href='@Url.Action("Index", "AdminPanel")'><span>Products</span></a>
 				@*<ul>
 					<li class='has-sub'>
 						<a href='#'><span>Product 1</span></a>
@@ -21,8 +21,8 @@
 					</li>
 				</ul>*@
 			</li>
-			<li><a href='@Url.Action("BlogAP", "AP")'><span>Blog</span></a></li>
-			<li class='last'><a href='@Url.Action("MessagesAP", "AP")'><span>Messages</span></a></li>
+			<li><a href='@Url.Action("Blog", "AdminPanel")'><span>Blog</span></a></li>
+			<li class='last'><a href='@Url.Action("Messages", "AdminPanel")'><span>Messages</span></a></li>
 		</ul>
 	</div>
 </div>

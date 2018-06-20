@@ -35,6 +35,22 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 -------------------------------------------------------------------*/
 
 
+/*CUSTOM CSS*/
+
+.overlay-block {
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+}
+
+.header-overlay {
+    height: 239px;
+    padding: 80px;
+}
+
+.padding-drop {
+    padding: 0 !important;
+}
+
 
 /*[ FONT ]
 ///////////////////////////////////////////////////////////

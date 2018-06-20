@@ -14,8 +14,8 @@ namespace BookStore.Controllers
         ProductContext db = new ProductContext();
         public ActionResult Products()
         {
-            var products = db.Products;
-            return View(products.ToList());
+            var query = db.Products.Include(p => p.ImageProducts);
+            return View(query.ToList());
         }
 
 		public ActionResult ProductDetails()

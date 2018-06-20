@@ -18,10 +18,12 @@
 	@Html.Partial("~/Views/PartialViews/Header.cshtml")
 
 	<!-- Title Page -->
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(/Content/Images/heading-pages-05.jpg);">
-		<h2 class="l-text2 t-center">
-			Blog
-		</h2>
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m padding-drop" style="background-image: url(/Content/Images/NewsHeaderPhoto.jpg);">
+        <div class="overlay-block header-overlay">
+            <h2 class="l-text2 t-center">
+                Blog
+            </h2>
+        </div>
 	</section>
 
 	<!-- content page -->
@@ -33,7 +35,7 @@
 						<!-- item blog -->
 						<div class="item-blog p-b-80">
 							<a href="@Url.Action("BlogDetails", "Blog")" class="item-blog-img pos-relative dis-block hov-img-zoom">
-								<img src="~/Content/Images/blog-04.jpg" alt="IMG-BLOG">
+								<img src="~/NewsImage/FirstPost.jpg" alt="IMG-BLOG">
 
 								<span class="item-blog-date dis-block flex-c-m pos1 size17 bg4 s-text1">
 									28 Dec, 2018
@@ -77,7 +79,7 @@
 						<!-- item blog -->
 						<div class="item-blog p-b-80">
 							<a href="@Url.Action("BlogDetails", "Blog")" class="item-blog-img pos-relative dis-block hov-img-zoom">
-								<img src="~/Content/Images/blog-05.jpg" alt="IMG-BLOG">
+								<img src="~/NewsImage/SecondPost.jpg" alt="IMG-BLOG">
 
 								<span class="item-blog-date dis-block flex-c-m pos1 size17 bg4 s-text1">
 									26 Dec, 2018
@@ -121,7 +123,7 @@
 						<!-- item blog -->
 						<div class="item-blog p-b-80">
 							<a href="@Url.Action("BlogDetails", "Blog")" class="item-blog-img pos-relative dis-block hov-img-zoom">
-								<img src="~/Content/Images/blog-08.jpg" alt="IMG-BLOG">
+								<img src="~/NewsImage/ThreePost.jpg" alt="IMG-BLOG">
 
 								<span class="item-blog-date dis-block flex-c-m pos1 size17 bg4 s-text1">
 									22 Dec, 2018
@@ -165,7 +167,7 @@
 						<!-- item blog -->
 						<div class="item-blog p-b-80">
 							<a href="@Url.Action("BlogDetails", "Blog")" class="item-blog-img pos-relative dis-block hov-img-zoom">
-								<img src="~/Content/Images/blog-02.jpg" alt="IMG-BLOG">
+								<img src="~/NewsImage/FourPost.jpg" alt="IMG-BLOG">
 
 								<span class="item-blog-date dis-block flex-c-m pos1 size17 bg4 s-text1">
 									18 Dec, 2018
@@ -209,7 +211,7 @@
 						<!-- item blog -->
 						<div class="item-blog p-b-80">
 							<a href="@Url.Action("BlogDetails", "Blog")" class="item-blog-img pos-relative dis-block hov-img-zoom">
-								<img src="~/Content/Images/blog-03.jpg" alt="IMG-BLOG">
+								<img src="~/NewsImage/FivePost.jpg" alt="IMG-BLOG">
 
 								<span class="item-blog-date dis-block flex-c-m pos1 size17 bg4 s-text1">
 									16 Dec, 2018
@@ -314,7 +316,7 @@
 						<ul class="bgwhite">
 							<li class="flex-w p-b-20">
 								<a href="@Url.Action("ProductDetails", "Products")" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="~/Content/Images/item-16.jpg" alt="IMG-PRODUCT">
+									<img src="~/ProductImages/Scratch.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -330,7 +332,7 @@
 
 							<li class="flex-w p-b-20">
 								<a href="@Url.Action("ProductDetails", "Products")" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="~/Content/Images/item-17.jpg" alt="IMG-PRODUCT">
+									<img src="~/ProductImages/T-Shirt.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -346,7 +348,7 @@
 
 							<li class="flex-w p-b-20">
 								<a href="@Url.Action("ProductDetails", "Products")" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="~/Content/Images/item-08.jpg" alt="IMG-PRODUCT">
+									<img src="~/ProductImages/Punt.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -362,7 +364,7 @@
 
 							<li class="flex-w p-b-20">
 								<a href="@Url.Action("ProductDetails", "Products")" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="~/Content/Images/item-03.jpg" alt="IMG-PRODUCT">
+									<img src="~/ProductImages/Clothes.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -378,7 +380,7 @@
 
 							<li class="flex-w p-b-20">
 								<a href="@Url.Action("ProductDetails", "Products")" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="~/Content/Images/item-05.jpg" alt="IMG-PRODUCT">
+									<img src="~/ProductImages/Shirt.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
