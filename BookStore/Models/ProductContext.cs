@@ -17,5 +17,9 @@ namespace BookStore.Models
         public DbSet<Type> Types { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<New> News { get; set; }
+        public DbSet<ImageNew> ImageNews { get; set; }
+        public DbSet<Them> Thems { get; set; }
+
     }
 }

@@ -2670,6 +2670,24 @@
     <Content Include="Content\Images\thumb-item-02.jpg" />
     <Content Include="Content\Images\thumb-item-03.jpg" />
     <Content Include="Content\Images\Untitled-5.jpg" />
+    <Content Include="Account\ConfirmEmail.cshtml" />
+    <Content Include="Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Account\ForgotPassword.cshtml" />
+    <Content Include="Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Account\Login.cshtml" />
+    <Content Include="Account\Register.cshtml" />
+    <Content Include="Account\ResetPassword.cshtml" />
+    <Content Include="Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Account\SendCode.cshtml" />
+    <Content Include="Account\VerifyCode.cshtml" />
+    <Content Include="Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Manage\ChangePassword.cshtml" />
+    <Content Include="Manage\Index.cshtml" />
+    <Content Include="Manage\ManageLogins.cshtml" />
+    <Content Include="Manage\SetPassword.cshtml" />
+    <Content Include="Manage\VerifyPhoneNumber.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="NewsImage\FirstPost.jpg" />
     <Content Include="NewsImage\FivePost.jpg" />
@@ -2779,22 +2797,34 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminPanelController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ImageNew.cs" />
     <Compile Include="Models\ImageProduct.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\New.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Models\ProductsDbInitializer.cs" />
+    <Compile Include="Models\Them.cs" />
     <Compile Include="Models\Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2932,12 +2962,20 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\AdminPanel\AdminMenu.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\AdminPanel\Create.cshtml" />
+    <Content Include="Views\AdminPanel\CreateNew.cshtml" />
     <Content Include="Views\AdminPanel\Delete.cshtml" />
     <Content Include="Views\AdminPanel\Details.cshtml" />
     <Content Include="Views\AdminPanel\Edit.cshtml" />
     <Content Include="Views\AdminPanel\Index.cshtml" />
     <Content Include="Views\AdminPanel\Header.cshtml" />
+    <Content Include="Views\AdminPanel\Create.cshtml" />
+    <Content Include="Views\AdminPanel\DeleteNew.cshtml" />
+    <Content Include="Views\AdminPanel\EditNew.cshtml" />
+    <Content Include="Views\AdminPanel\Blog.cshtml" />
+    <Content Include="Shared\Error.cshtml" />
+    <Content Include="Shared\Lockout.cshtml" />
+    <Content Include="Shared\_Layout.cshtml" />
+    <Content Include="Shared\_LoginPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

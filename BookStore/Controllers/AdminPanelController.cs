@@ -23,7 +23,7 @@ namespace BookStore.Controllers
             return View(query.ToList());
         }
 
-        // GET: AdminPanel/Details/5
+        // GET: AdminPanel/Details/
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -144,6 +144,110 @@ namespace BookStore.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        //////////////////------BLOG------///////////////////
+        // GET: AdminPanel
+        public ActionResult Blog()
+        {
+            var query = db.News.Include(p => p.ImagesNew);
+            return View(query.ToList());
+        }
+
+        public ActionResult CreateNew() => View();
+
+        // POST: AdminPanel/CreateNew
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public ActionResult CreateNew(New news, HttpPostedFileBase ImageFile, ImageNew imageNew)
+        {
+            if (ImageFile != null)
+            {
+                string fileExtention = Path.GetExtension(ImageFile.FileName);
+                string fileName = Guid.NewGuid().ToString() + fileExtention.ToString();
+                ImageFile.SaveAs(Server.MapPath("~/NewsImage/" + fileName));
+
+                imageNew.ImageName = fileName;
+
+                imageNew.NewId = news.Id;
+
+                db.News.Add(news);
+                db.ImageNews.Add(imageNew);
+
+                db.SaveChanges();
+                ModelState.Clear();
+                return RedirectToAction("Blog");
+            }
+            return RedirectToAction("Blog");
+        }
+
+        // GET: AdminPanel/EditNew/5
+        public ActionResult EditNew(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            New news = db.News.Find(id);
+            if (news == null)
+            {
+                return HttpNotFound();
+            }
+            return View(news);
+        }
+
+        // POST: AdminPanel/EditNew/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditNew([Bind(Include = "Id,Title,Text,Them")] New news)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(news).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Blog");
+            }
+            return View(news);
+        }
+
+        // GET: AdminPanel/DeleteNew/5
+        public ActionResult DeleteNew(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            New news = db.News.Find(id);
+            if (news == null)
+            {
+                return HttpNotFound();
+            }
+            return View(news);
+        }
+
+        // POST: AdminPanel/DeleteNew/5
+        [HttpPost, ActionName("DeleteNew")]
+        [ValidateAntiForgeryToken]
+        public ActionResult NewDeleteConfirmed(int id)
+        {
+            New news = db.News.Find(id);
+
+            foreach (var item in news.ImagesNew)
+            {
+                if (item.NewId == id)
+                {
+                    string imagePath = "~/NewsImage/" + item.ImageName;
+
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+
+            db.News.Remove(news);
+            db.SaveChanges();
+
+            return RedirectToAction("Blog");
         }
     }
 }
